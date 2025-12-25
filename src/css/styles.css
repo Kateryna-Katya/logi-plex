@@ -1311,7 +1311,7 @@ svg.lucide {
 /* Адаптив для страниц */
 @media (max-width: 768px) {
     .pages h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .pages__contact-box {
