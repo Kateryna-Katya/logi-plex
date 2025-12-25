@@ -1,55 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logi-plex/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logi-Plex | Передовая IT-платформа</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/logi-plex/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/logi-plex/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/logi-plex/assets/styles-BpKQj0Qe.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
+    <div class="menu-overlay" id="menuOverlay">
+  <nav class="mobile-nav">
+    <a href="./#hero" class="mobile-nav__link">Главная</a>
+    <a href="./#about" class="mobile-nav__link">О платформе</a>
+    <a href="./#benefits" class="mobile-nav__link">Преимущества</a>
+    <a href="./#innovations" class="mobile-nav__link">Инновации</a>
+    <a href="./#contact" class="mobile-nav__link">Контакты</a>
+  </nav>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__container">
+    <a href="./#hero" class="logo">
+      <span class="logo__dot"></span>
+      <span class="logo__text">Logi-Plex</span>
+    </a>
+
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+      <ul class="nav__list">
+        <li><a href="./#about" class="nav__link">О платформе</a></li>
+        <li><a href="./#benefits" class="nav__link">Преимущества</a></li>
+        <li><a href="./#innovations" class="nav__link">Инновации</a></li>
+        <li><a href="./#courses" class="nav__link">Обучение</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="./#contact" class="btn btn--secondary">Запросить доступ</a>
+      <button class="burger" id="burgerBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="container hero__grid">
+        <div class="hero__content">
+            <span class="badge">Технология будущего</span>
+            <h1 class="hero__title" id="heroTitle">Инновационная платформа для вашего роста</h1>
+            <p class="hero__subtitle">Logi-Plex — это экосистема, где передовая цифровая инфраструктура встречается с
+                практическим обучением. Платформа уже доступна в Европе.</p>
+            <div class="hero__btns">
+                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                <a href="#courses" class="btn btn--outline">Посмотреть курсы</a>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="main-sphere"></div>
+<div class="orbit-item item-1">
+    <i data-lucide="code"></i>
+</div>
+<div class="orbit-item item-2">
+    <i data-lucide="database"></i>
+</div>
+<div class="orbit-item item-3">
+    <i data-lucide="cpu"></i>
+</div>
+            <div class="floating-glass"></div>
+        </div>
+    </div>
+    <div class="hero__bg-glow"></div>
+</section>
+
+<section class="education section-padding" id="courses">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Программы, которые меняют <span class="text-gradient">правила игры</span></h2>
+            <p class="section-desc">Выберите направление и начните путь в IT с экспертной поддержкой на всех этапах.</p>
+        </div>
+
+        <div class="education__grid">
+            <div class="course-card">
+                <div class="course-card__tag">Best Seller</div>
+                <div class="course-card__icon">
+                    <i data-lucide="layers"></i>
+                </div>
+                <h3>Fullstack Developer</h3>
+                <p>От основ логики до построения сложных архитектурных решений на базе инноваций.</p>
+                <ul class="course-details">
+                    <li><i data-lucide="clock"></i> 6 месяцев</li>
+                    <li><i data-lucide="bar-chart-3"></i> Средний уровень</li>
+                </ul>
+                <a href="#contact" class="btn btn--secondary btn--sm">Узнать детали</a>
+            </div>
+
+            <div class="course-card">
+                <div class="course-card__tag">New</div>
+                <div class="course-card__icon">
+                    <i data-lucide="brain-circuit"></i>
+                </div>
+                <h3>AI & Data Science</h3>
+                <p>Изучите AI-инструменты для реальных задач и методы анализа больших данных.</p>
+                <ul class="course-details">
+                    <li><i data-lucide="clock"></i> 8 месяцев</li>
+                    <li><i data-lucide="bar-chart-3"></i> Продвинутый</li>
+                </ul>
+                <a href="#contact" class="btn btn--secondary btn--sm">Запросить доступ</a>
+            </div>
+
+            <div class="course-card">
+                <div class="course-card__tag">Express</div>
+                <div class="course-card__icon">
+                    <i data-lucide="terminal"></i>
+                </div>
+                <h3>Backend Python</h3>
+                <p>Создание масштабируемой серверной логики и передовая цифровая инфраструктура.</p>
+                <ul class="course-details">
+                    <li><i data-lucide="clock"></i> 4 месяца</li>
+                    <li><i data-lucide="bar-chart-3"></i> Легкий старт</li>
+                </ul>
+                <a href="#contact" class="btn btn--secondary btn--sm">Начать сейчас</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about section-padding" id="about">
+    <div class="container">
+        <div class="about__wrapper">
+            <div class="about__visual">
+                <div class="about__blob"></div>
+                <div class="about__image-container">
+                    <img src="/logi-plex/assets/one-G2rUELLk.jpg" alt="Logi-Plex Experience" class="about__main-img">
+                </div>
+                <div class="glass-stat stat-1" data-speed="0.05">
+                    <div class="glass-stat__icon"><i class="lucide-globe"></i></div>
+                    <div class="glass-stat__content">
+                        <span>EU Standard</span>
+                        <p>Доступно в Европе</p>
+                    </div>
+                </div>
+                <div class="glass-stat stat-2" data-speed="-0.07">
+                    <span class="glass-stat__number">99.9%</span>
+                    <p>Uptime системы</p>
+                </div>
+            </div>
+
+            <div class="about__content">
+                <span class="badge">О платформе</span>
+                <h2 class="section-title">Переосмыслите подход к <span class="text-gradient">цифровому развитию</span>
+                </h2>
+                <p class="about__lead">Logi-Plex — это не просто IT-школа. Это инновационная технология, созданная для
+                    тех, кто ценит время и результат.</p>
+
+                <div class="about__features">
+                    <div class="feature-item">
+                        <div class="feature-item__dot"></div>
+                        <div class="feature-item__text">
+                            <h4>Легкий старт</h4>
+                            <p>Пошаговый путь, понятный каждому, даже без опыта в кодинге.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__dot"></div>
+                        <div class="feature-item__text">
+                            <h4>Экспертная среда</h4>
+                            <p>Поддержка по всем вопросам от практиков из стран ЕС.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits section-padding" id="benefits">
+    <div class="container">
+        <div class="section-header center">
+            <span class="badge">Преимущества</span>
+            <h2 class="section-title">Почему Logi-Plex — <br>это <span class="text-gradient">ваш выбор</span></h2>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-card bento-card--main">
+                <div class="bento-card__content">
+                    <i data-lucide="zap"></i>
+                    <h3>Быстрый старт за 2 минуты</h3>
+                    <p>Наша цифровая инфраструктура позволяет начать обучение мгновенно после запроса доступа.</p>
+                </div>
+                <div class="bento-card__decor"></div>
+            </div>
+
+            <div class="bento-card bento-card--accent">
+                <i data-lucide="trending-up"></i>
+                <h3>Стратегия роста</h3>
+                <p>Методологии, доказавшие свою эффективность на реальных задачах.</p>
+            </div>
+
+            <div class="bento-card">
+                <i data-lucide="shield-check"></i>
+                <h3>EU Сертификация</h3>
+                <p>Ваши навыки будут актуальны на международном рынке.</p>
+            </div>
+
+            <div class="bento-card bento-card--small">
+                <i data-lucide="users"></i>
+                <h3>Community</h3>
+                <p>Доступ к закрытой экосистеме партнеров.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="innovations section-padding" id="innovations">
+    <div class="container">
+        <div class="promo-banner">
+            <div class="promo-banner__content">
+                <h2 class="section-title">AI-инструменты для <br><span class="text-glow">реальных задач</span></h2>
+                <p>Используйте технологии нового поколения, которые работают на вас. Получите доступ к закрытой
+                    инфраструктуре прямо сейчас.</p>
+                <div class="promo-banner__actions">
+                    <a href="#contact" class="btn btn--primary">Запросить доступ</a>
+                    <span class="promo-banner__note">Предложение активно только в странах ЕС</span>
+                </div>
+            </div>
+            <div class="promo-banner__visual">
+                <div class="neural-mesh"></div>
+                <div class="floating-code">
+                    <code>{ status: "active", tools: "AI-ready" }</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__wrapper">
+            <div class="contact__info">
+                <h2 class="section-title">Бесплатная консультация</h2>
+                <p>Оставьте заявку, чтобы оценить перспективы проекта и получить больше информации.</p>
+            </div>
+            <form class="contact__form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email (team@logi-plex.blog)" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" id="phoneInput" placeholder="Телефон (только цифры)" required>
+                </div>
+
+                <div class="form-captcha">
+                    <span id="captchaQuestion">5 + 2 = ?</span>
+                    <input type="text" id="captchaInput" placeholder="Ответ" required>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" required>
+                    <span>Согласен с политикой обработки данных</span>
+                </label>
+
+                <button type="submit" class="btn btn--primary full-width">Пройти регистрацию</button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="./#hero" class="logo footer__logo">
+        <span class="logo__dot"></span>
+        <span class="logo__text">Logi-Plex</span>
       </a>
-    </p>
+      <p class="footer__description">
+        Решения, которые меняют правила игры. Ваша точка входа в высокотехнологичное будущее и профессиональный рост.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__links">
+        <li><a href="./#hero">Главная</a></li>
+        <li><a href="./#about">О платформе</a></li>
+        <li><a href="./#benefits">Преимущества</a></li>
+        <li><a href="./#courses">Программы</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Правовая информация</h4>
+      <ul class="footer__links">
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./cookies.html">Cookie Policy</a></li>
+        <li><a href="./terms.html">Terms of Service</a></li>
+        <li><a href="./return.html">Return Policy</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+        <li><a href="./personal-data-policy.html">Personal Data</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Контакты</h4>
+      <ul class="footer__contacts">
+        <li>
+          <i class="lucide-phone"></i>
+          <a href="tel:+493022140500">+49 (30) 221-40-500</a>
+        </li>
+        <li>
+          <i class="lucide-mail"></i>
+          <a href="mailto:team@logi-plex.blog">team@logi-plex.blog</a>
+        </li>
+        <li>
+          <i class="lucide-map-pin"></i>
+          <span>Kurfürstendamm 213, 10719 Berlin, Germany</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer__bottom">
+      <p>&copy; 2025 Logi-Plex. Платформа года в Европе. Все права защищены.</p>
+    </div>
   </div>
 </footer>
+    <div class="cookie-popup" id="cookiePopup">
+      <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+      </p>
+      <button class="btn btn--secondary btn--sm" id="acceptCookies">Принять</button>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 
 
   </body>
