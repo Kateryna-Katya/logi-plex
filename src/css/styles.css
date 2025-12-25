@@ -1237,3 +1237,107 @@ svg.lucide {
     border-color: var(--accent);
     background: rgba(99, 102, 241, 0.05);
 }
+/* --- СТИЛИЗАЦИЯ ЮРИДИЧЕСКИХ СТРАНИЦ --- */
+.pages h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #FFFFFF 0%, #94A3B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pages h2 {
+    font-size: 24px;
+    color: var(--accent);
+    margin: 48px 0 20px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.pages p {
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    max-width: 850px;
+}
+
+.pages__lead {
+    font-size: 20px !important;
+    color: var(--white) !important;
+    border-left: 3px solid var(--accent);
+    padding-left: 24px;
+    margin-bottom: 40px !important;
+}
+
+.pages__list {
+    margin-bottom: 32px;
+}
+
+.pages__list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.pages__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 12px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.pages__list strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.pages__contact-box {
+    margin-top: 64px;
+    padding: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+}
+
+.pages__contact-box h2 {
+    margin-top: 0;
+}
+
+/* Адаптив для страниц */
+@media (max-width: 768px) {
+    .pages h1 {
+        font-size: 32px;
+    }
+
+    .pages__contact-box {
+        padding: 24px;
+    }
+}
+/* --- ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ДИСКЛЕЙМЕРА --- */
+.legal-item h2 {
+    font-size: 20px !important;
+    margin-bottom: 12px !important;
+    color: var(--white) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стилизация иконки в кнопке возврата (если Lucide подключен через JS) */
+.btn i,
+.btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Выделение блока предупреждения о рисках */
+.pages__contact-box h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
